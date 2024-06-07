@@ -25,27 +25,26 @@ header h1 {
   font-weight: 400;
   margin: 0; /* Remove any default margin from the h1 */
 }
+
 .container {
-  display: flex;
   justify-content: center; /* Centers the content inside the container horizontally */
   align-items: center; /* Centers the content inside the container vertically */
-  margin: 20px; /* Margin for spacing around the container */
-}
-.container {
+  margin: 15px; /* Margin for spacing around the container */
   background-color: #3ba0fe;
-  height: 500px;
-  width: 500px;
+  height: 480px;
+  width: 400px;
   border-radius: 10px;
   display: grid;
 }
 
 .tic-tac-toe {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
   grid-template-rows: repeat(3, 1fr); /* 3 rows of equal height */
   gap: 10px; /* Space between the squares */
-  width: 400px; /* Total width of the grid */
-  height: 400px; /* Total height of the grid */
+  width: 350px; /* Total width of the grid */
+  height: 350px; /* Total height of the grid */
 }
 
 .box {
@@ -74,7 +73,7 @@ header h1 {
 button {
   background-color: rgb(132, 212, 12);
   border: none;
-  height: 50px;
+  height: 40px;
   font-size: 30px;
   font-family: "Ultra", serif;
 }
