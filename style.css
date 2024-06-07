@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  font-family: "Ultra", serif;
   display: flex;
   justify-content: center; /* Centers the header horizontally */
   align-items: center; /* Centers the header vertically */
@@ -21,7 +22,6 @@ header {
 }
 header h1 {
   font-size: 50px;
-  font-family: "Ultra", serif;
   font-weight: 400;
   margin: 0; /* Remove any default margin from the h1 */
 }
@@ -43,12 +43,12 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
   grid-template-rows: repeat(3, 1fr); /* 3 rows of equal height */
-  gap: 5px; /* Space between the squares */
+  gap: 10px; /* Space between the squares */
   width: 400px; /* Total width of the grid */
   height: 400px; /* Total height of the grid */
 }
 
-.square {
+.box {
   background-color: hsl(240, 52%, 13%); /* Background color for squares */
   display: flex;
   justify-content: center;
@@ -57,4 +57,24 @@ header h1 {
   color: white;
   cursor: pointer; /* Pointer cursor on hover */
   border-radius: 10px;
+}
+
+.x {
+  color: #eb1751;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.o {
+  color: #ffd035;
+  font-weight: 400;
+  font-size: 60px;
+}
+
+button {
+  background-color: rgb(132, 212, 12);
+  border: none;
+  height: 50px;
+  font-size: 30px;
+  font-family: "Ultra", serif;
 }
