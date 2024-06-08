@@ -1,4 +1,7 @@
 // Declare the array to store clicked box indices
+let tictactoe = document.querySelector(".tic-tac-toe");
+let reset = document.querySelector(".reset");
+let boxes = document.querySelectorAll(".box");
 let boxesClicked = [];
 let isPlayerX = true; // This will alternate between X and O
 
@@ -34,7 +37,19 @@ function clickBox(event) {
   }
 }
 
-// Add the event listener to the tic-tac-toe container
-document.querySelector(".tic-tac-toe").addEventListener("click", clickBox);
+// Add the event listener to the tic-tac-toe
+tictactoe.addEventListener("click", clickBox);
 
-function reset() {}
+reset.addEventListener("click", function reset() {
+  console.log("reset button clicked");
+
+  boxes.forEach((box) => {
+    box.textContent = "";
+    box.classList.remove("x", "o");
+  });
+  // Clear the array of clicked box indices
+  boxesClicked = [];
+
+  // Reset the player to X (optional)
+  isPlayerX = true;
+});
