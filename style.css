@@ -74,12 +74,14 @@ header h1 {
   color: #eb1751;
   font-size: 60px;
   font-weight: 400;
+  font-family: "Ultra", serif;
 }
 
 .o {
   color: #ffd035;
   font-weight: 400;
   font-size: 60px;
+  font-family: "Ultra", serif;
 }
 
 .reset {
