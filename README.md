@@ -11,7 +11,7 @@ Reset the Game: Click the Reset button to start a new game.
 Screenshot
 Replace the link with the actual URL of the image hosted in your repository or an image hosting service.
 
-[!tic tac toe](./images/tictactoe.png)
+![tic tac toe](./images/tictactoe.png)
 
 ## Demo
 
