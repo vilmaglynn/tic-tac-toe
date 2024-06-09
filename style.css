@@ -1,19 +1,25 @@
 * {
   box-sizing: border-box;
 }
-body {
-  font-family: "Ultra", serif;
+
+body,
+header,
+.box,
+.totalWins,
+.winner-details,
+.main-container {
   display: flex;
   justify-content: center; /* Centers the header horizontally */
   align-items: center; /* Centers the header vertically */
+}
+
+body {
+  font-family: "Ultra", serif;
   margin: 0; /* Removes default margin */
   flex-direction: column; /* Aligns items in a column for vertical stacking */
   background-color: #d8ebfc;
 }
 header {
-  display: flex;
-  justify-content: center; /* Centers the content inside the header horizontally */
-  align-items: center; /* Centers the content inside the header vertically */
   margin: 0; /* Removes default margin */
   padding: 20px; /* Optional padding for spacing */
   width: 100%; /* Ensures the header spans the width of the viewport */
@@ -49,15 +55,21 @@ header h1 {
 
 .box {
   background-color: hsl(240, 52%, 13%); /* Background color for squares */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 2rem;
   color: white;
   cursor: pointer; /* Pointer cursor on hover */
   border-radius: 10px;
 }
 
+.instructions {
+  font-weight: normal;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 400px;
+}
+
+.totalWins {
+  flex-direction: column;
+}
 .x {
   color: #eb1751;
   font-size: 60px;
@@ -76,4 +88,86 @@ header h1 {
   height: 40px;
   font-size: 30px;
   font-family: "Ultra", serif;
+}
+
+.winnerX {
+  background-color: #f7a3b9;
+}
+.winnerO {
+  background-color: #fdf1c9;
+}
+
+/* Winner details styling */
+.winner-details {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.winner-message {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.winner-message {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.fa-trophy {
+  font-size: 100px;
+  color: rgb(209, 0, 195);
+}
+
+/* Responsive  */
+@media (min-width: 1024px) {
+  .instructions,
+  .container,
+  .winner-details {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .instructions {
+    font-weight: normal;
+    font-family: "Courier New", Courier, monospace;
+    max-width: 600px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  .instructions,
+  .container,
+  .winner-details {
+    width: 100%;
+    max-width: 400px;
+    margin: 5px 0;
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .reset {
+    font-size: 1.2rem;
+    height: 35px;
+  }
 }

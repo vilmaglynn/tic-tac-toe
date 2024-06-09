@@ -9,33 +9,55 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
 	<header>
 		<h1>Tic Tac Toe</h1>
-		<!-- <p>Tic Tac Toe is a simple, two-player game played on a 3x3 grid. Each player takes turns marking a cell in the
-			grid with either an 'X' or an 'O'. The objective is to be the first to form a horizontal, vertical, or
-			diagonal line of three of one's own marks. The game ends in a draw if all cells are filled without any
-			player achieving a line of three. It's a quick and strategic game often used to teach basic concepts of
-			logic and planning.</p> -->
 	</header>
-	<div class="container">
 
-		<div class="tic-tac-toe">
-			<div class="box" data-index="1"></div>
-			<div class="box" data-index="2"></div>
-			<div class="box" data-index="3"></div>
-			<div class="box" data-index="4"></div>
-			<div class="box" data-index="5"></div>
-			<div class="box" data-index="6"></div>
-			<div class="box" data-index="7"></div>
-			<div class="box" data-index="8"></div>
-			<div class="box" data-index="9"></div>
+	<div class="main-container">
+		<!-- Instructions Column -->
+		<div class="instructions">
+			<h2>Instructions</h2>
+			<p>Click on any box to place your mark. Player X starts first. The first player to get three in a row wins
+				the game. If all boxes are filled without a winner, it's a tie. Click the reset button to start a new
+				game.</p>
+			<div class="totalWins">
+				<h2>Total wins</h2>
+				<span class="x winnerX">X =<span id="x-wins">0</span></span>
+				<span class="o winnerO">O =<span id="o-wins">0</span></span>
+			</div>
 		</div>
-		<button class="reset">Reset</button>
+
+		<!-- Tic Tac Toe Game Column -->
+		<div class="container">
+			<div class="tic-tac-toe">
+				<div class="box" data-index="0"></div>
+				<div class="box" data-index="1"></div>
+				<div class="box" data-index="2"></div>
+				<div class="box" data-index="3"></div>
+				<div class="box" data-index="4"></div>
+				<div class="box" data-index="5"></div>
+				<div class="box" data-index="6"></div>
+				<div class="box" data-index="7"></div>
+				<div class="box" data-index="8"></div>
+			</div>
+			<button class="reset">Clear / Play</button>
+		</div>
+
+		<!-- Winner Details Column -->
+		<div class="winner-details">
+			<h2></h2>
+			<i class="fa-solid fa-trophy"></i>
+			<p class="winner-message">No winner yet</p>
+		</div>
 	</div>
+
 	<script src="./script.js"></script>
 </body>
 
